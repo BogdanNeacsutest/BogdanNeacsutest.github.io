@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap');
+
+:root{
+    --blue:#0188df;
+    --black:#354046;
+
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    border:none !important;
+    outline: none !important;
+    text-decoration: none !important;
+    font-weight: 400;
+    transition: all .2s linear;
+}
+
+*::selection{
+    background:var(--black);
+    color:#fff;
+    }
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+section{
+    overflow: hidden;
+}
+
+.button{
+    height: 3.5rem;
+    width: 15rem;
+    background: var(--blue);
+    color: #fff;
+    font-size: 1.7rem;
+    text-transform: capitalize;
+    border-radius: .5rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+.button::before{
+    content: '';
+    position: absolute;
+    top: -100%;left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--black);
+    z-index: -1;
+    transition: .2s linear;
+}
+
+.button:hover:before{
+    top: 0%;
+}
+
+.button:hover{
+    box-shadow: .1rem .5rem var(--blue),
+                0 .3rem .5rem rgba(0,0,0,.3)
+}
+
+.heading{
+    text-align: center;
+    font-size: 4rem;
+    padding: 1rem;
+    padding-top: 8rem;
+    color: var(--blue);
+}
+
+header{
+    width: 100%;
+    position: fixed;
+    top:0;left: 0;
+    padding: 2rem 1rem;
+    z-index: 1000;
+}
+
+.header-active{
+    background: #fff;
+    box-shadow: 0 .1rem 3rem rgba(0,0,0,.3);
+    padding: .1rem 3rem;
+}
+
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    color:var(--black);
+}
+
+header a:hover{
+    color:var(--blue);
+}
+
+header .container .logo{
+    font-size: 3rem;
+}
+
+header .container .logo span{
+    color:var(--blue);
+}
+
+header .nav ul{
+    margin:0;padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+header .nav ul li{
+    margin:0 1rem;
+}
+
+header .nav ul li a{
+    font-size: 2rem;
+}
+
+header .fa-bars{
+    font-size: 3.5rem;
+    color:var(--blue);
+    cursor: pointer;
+    display: none;
+}
+
+/*Icons*/
+.home {
+    background: #fff;
+}
+
+.home .content .box{
+    margin: 3rem 0;
+}
+
+.home .content .box h3{
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+.home .content .box h3 i{
+    padding: 0 1rem;
+    color: var(--blue);
+}
+
+.home .content .box p{
+    font-size: 1.7rem;
+    padding-left: 4rem;
+    color: #666;
+}
+
+.about {
+    background: #eee;
+}
+.about .container .box h3{
+padding-bottom: 2rem;
+color: var(--blue);
+text-justify: inter-character;
+width: 150%;
+}
+
+.about .galery{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 130%;
+}
+
+#team{
+    width: 130%;
+}
+ #team img {
+    width: 300px !important;
+    height: 300px !important;
+    margin-bottom:5px; /* to match column gap */
+ }
+ #team .box-container
+ {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+ }
+.facility .container .box{
+    display: flex;
+    justify-content: space-between;
+    width: 150%;
+}
+
+
+
+.facility .container .box h3{
+    font-weight: bold;
+    font-size:300%;
+    text-align: center;
+    white-space: pre;
+    
+}
+
+.facility .container .box span{
+white-space: pre;
+}
+
+.facility .container .box p{
+    text-align: center;
+    font-size: 200%;
+    white-space: pre-line;
+}
+
+
+
+
+
+
+.galery .box-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 3rem;
+}
+
+.galery .box-container .box{
+    height: 20rem;
+    width: 30rem;
+    margin: .3rem;
+    overflow: hidden;
+}
+
+.galery .box-container .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.galery .box-container .box:hover img{
+transform: scale(1.3);
+
+}
+
+.contact{
+    background: var(--black);
+}
+
+.contact .heading{
+color: #fff;
+}
+
+.contact form{
+    text-align: center;
+}
+
+.contact form .inputBox{
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.contact form .inputBox input, select{
+    height: 4rem;
+    width: 49%;
+    padding: 0 1rem;
+    margin:1rem 0;
+    font-size: 1.7rem;
+    color: var(--black);
+}
+
+.contact form textarea{
+    height: 20rem;
+    resize: none;
+    padding: 1rem;
+    font-size:1.5rem;
+    width: 100%;
+}
+
+.contact form input[type="submit"]{
+    width: 20rem;
+}
+.contact form input[type="submit"]:hover{
+    background: var(--black);
+}
+
+.footer{
+    background: white;
+}
+.footer .logo img{
+    max-width: 65%;
+    max-height: 75;
+object-fit: contain;
+margin-top: 7rem;
+}
+
+.footer .logo p{
+    font-size: larger;
+}
+
+.footer a{
+    font-size: 2rem;
+    color: black;
+    display: block;
+}
+
+.footer .com-md-4:nth-child(1) a{
+    font-size: 3rem;
+    color: #fff;
+}
+
+.footer h3{
+    color: black;
+    font-size: 3rem;
+}
+
+.footer a:hover{
+    color: var(--blue);
+}
+
+.footer .credit{
+    color:black;
+    width: 80%;
+    margin: 0;
+    padding: 0.1rem 0;
+    padding-bottom: 1rem;
+    border-top: .1rem solid #ccc !important;
+    font-size:small;
+}
+.footer .credit span{
+    color: var(--blue);
+}
+
+.table-container{
+    padding: 0 10%;
+    margin: 40px auto 0;
+    }
+.headingb{
+    font-size: 40px;
+    text-align: center;
+    color: var(--blue);
+    margin-bottom: 40px;
+}
+.table{
+    width: 100%;
+    border-collapse:separate;
+}
+.table thead{
+    background-color: var(--blue);
+}
+.table thead tr th{
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.35px;
+    color: #ffffff;
+    opacity: 1;
+    padding: 12px;
+    vertical-align: top;
+    border: 1px solid #ffffff;
+    text-align: center;
+}
+.table tbody tr td{
+    font-size: 14px;
+    letter-spacing: 0.35px;
+    font-weight: normal;
+    color:var(--blue);
+    background-color: #ffffff;
+    padding: 8px;
+    text-align:center;
+}
+.table tbody tr td p{
+    font-size:14px;
+    background-color: var(--blue);
+    color: #ffffff;
+    white-space: pre-wrap;
+    text-align: center;
+}
+.table tbody tr td h2{
+    text-align: center;
+}
+
+
+
+
+/*media queries*/
+
+@media (max-width:768px){
+    html{
+        font-size: 55%;
+    }
+    header .fa-bars{
+        display: block;
+    }
+    header .fa-times{
+        transform:rotate(180deg);
+    }
+    header .container .logo
+    {
+        display: none;
+    }
+    header .nav{
+        position: fixed;
+        top:-100%; left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 0 100vh rgba(0,0,0,.3);
+        border-radius: .5rem;
+        border:.3rem solid var(--blue) !important;
+        background: #fff;
+        width: 95%;
+        opacity: 0;
+    }
+    header .nav ul{
+        width: 100%;
+        flex-flow: column;
+        padding: 2rem 0;
+    }
+    header .nav ul li{
+        width: 100%;
+        text-align: center;
+        margin:1rem 0;
+    }
+    header .nav ul li a{
+        font-size: 3rem;
+        display: block;
+    }
+    header .nav-toggle{
+        top:50%;
+        opacity: 1;
+    }
+    .contact form .inputBox input, select{
+        width: 100%;
+    }
+    .contact form input[type="submit"]{
+        width: 100%;
+    }
+.table thead{
+    display:none;
+}
+.table,.table tbody,.table tr,.table td{
+    display: block;
+    width: 100%;
+}
+.table tr{
+    margin-bottom: 15px;
+}
+.table tbody tr td{
+    text-align: right;
+    padding-left: 50px;
+    position: relative;
+}
+.table td:before{
+    content: attr(data-label);
+    position: absolute;
+    left:0;
+    width: 50%;
+    padding-left: 15px;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: left;
+}
+.footer{
+    visibility: hidden;
+}
+
+.team .box-container{
+    display:block;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+}
